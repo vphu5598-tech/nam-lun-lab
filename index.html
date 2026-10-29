@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#101827">
+<title>Nấm Lùn Lab</title>
+<style>
+:root{color-scheme:dark;--bg:#0b1220;--panel:#141f31;--panel2:#1b2a40;--line:#2b3b53;--text:#f4f7fb;--muted:#9aabc2;--green:#65e6a5;--blue:#79b7ff;--gold:#ffd36e;--red:#ff7f8b}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#1a2d48 0%,var(--bg) 55%);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text);min-height:100vh;padding:env(safe-area-inset-top) 14px calc(22px + env(safe-area-inset-bottom))}
+.wrap{max-width:560px;margin:0 auto}.top{display:flex;align-items:center;gap:12px;padding:18px 2px 16px}.logo{width:50px;height:50px;border-radius:16px;background:linear-gradient(145deg,#75f0b0,#38a8a1);display:grid;place-items:center;color:#10251f;font-size:27px;box-shadow:0 8px 24px #35c69a30}.eyebrow{font-size:11px;letter-spacing:1.5px;color:var(--green);font-weight:800}.title{font-size:26px;letter-spacing:-.7px;font-weight:850;margin:2px 0}.sub{font-size:13px;color:var(--muted)}.tag{margin-left:auto;align-self:flex-start;border:1px solid #3e536c;border-radius:99px;padding:6px 9px;color:#c6d5e8;font-size:11px;white-space:nowrap}
+.card{background:linear-gradient(160deg,#17253a,#111b2b);border:1px solid var(--line);border-radius:22px;padding:17px;margin:12px 0;box-shadow:0 12px 30px #0000001a}.section-title{font-size:16px;font-weight:800;margin:0 0 4px}.hint{font-size:12px;color:var(--muted);line-height:1.45}.feature{display:flex;align-items:center;gap:12px;padding:14px 0}.feature+.feature{border-top:1px solid #2a394d}.feat-icon{width:43px;height:43px;border-radius:14px;display:grid;place-items:center;font-size:21px;background:#253650}.feat-text{flex:1}.feat-name{font-weight:800;font-size:15px}.feat-desc{font-size:12px;color:var(--muted);margin-top:3px;line-height:1.4}.switch{appearance:none;width:49px;height:29px;background:#35445a;border-radius:99px;position:relative;transition:.2s;flex-shrink:0;margin:0}.switch:before{content:"";position:absolute;width:23px;height:23px;left:3px;top:3px;background:white;border-radius:50%;transition:.2s;box-shadow:0 1px 4px #0005}.switch:checked{background:#27b77d}.switch:checked:before{transform:translateX(20px)}
+.arena{background:radial-gradient(ellipse at 50% 10%,#263f5b,#101a2a 68%);border:1px solid #344860;border-radius:18px;padding:18px 14px;text-align:center;overflow:hidden;position:relative}.arena:after{content:"";position:absolute;left:0;right:0;bottom:42px;height:1px;background:#49627a55}.monster{font-size:70px;line-height:1.2;filter:drop-shadow(0 8px 8px #0005);transition:transform .15s}.monster.hit{transform:translateX(5px) rotate(4deg) scale(.94)}.monster-name{font-size:17px;font-weight:800;margin-top:6px}.hp-label{display:flex;justify-content:space-between;font-size:12px;color:#c1d0e2;margin:12px 2px 6px}.bar{height:11px;background:#452d3c;border-radius:99px;overflow:hidden;border:1px solid #66414b}.fill{height:100%;width:100%;background:linear-gradient(90deg,#ff697e,#ffab73);border-radius:99px;transition:width .25s}.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}.stat{background:#0c1625a8;border:1px solid #2b3b50;border-radius:13px;padding:10px}.stat-label{font-size:11px;color:var(--muted)}.stat-val{font-size:19px;font-weight:850;margin-top:3px}.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}.btn{border:0;border-radius:14px;padding:14px 10px;font-size:14px;font-weight:800;cursor:pointer;touch-action:manipulation}.primary{background:linear-gradient(135deg,#6ae9a6,#38c5a0);color:#08251b;box-shadow:0 7px 18px #39d39a22}.secondary{background:#273a54;border:1px solid #405675;color:#f4f7fb}.btn:active{transform:scale(.98)}.log{background:#0b1524;border:1px solid #26374c;border-radius:13px;padding:11px;min-height:42px;font-size:12px;color:#b9c9dc;line-height:1.45;margin-top:12px}.log strong{color:var(--green)}.notice{display:flex;gap:10px;padding:13px;border-radius:15px;background:#172a2d;border:1px solid #2d5750;font-size:12px;color:#c9e9dc;line-height:1.5}.notice span{font-size:18px}.footer{text-align:center;font-size:11px;color:#71839b;padding:8px 10px 20px;line-height:1.5}.reset{background:none;border:0;color:var(--blue);font-weight:700;font-size:12px;padding:10px;cursor:pointer}
+@media(min-width:500px){body{padding-top:20px}.card{padding:20px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div class="logo">🍄</div>
+  <div><div class="eyebrow">TRAINING SANDBOX</div><div class="title">Nấm Lùn Lab</div><div class="sub">Bảng thử nghiệm chiến đấu · v0.2</div></div>
+  <div class="tag">DEMO</div>
+</header>
+<section class="card">
+  <div class="section-title">Tùy chọn mô phỏng</div>
+  <div class="hint">Bật/tắt chức năng rồi thử trong đấu trường bên dưới.</div>
+  <div class="feature">
+    <div class="feat-icon">⚔️</div>
+    <div class="feat-text"><div class="feat-name">One Hit</div><div class="feat-desc">Đòn đánh kế tiếp hạ quái ngay trong mô phỏng.</div></div>
+    <input class="switch" id="oneHit" type="checkbox" aria-label="Bật mô phỏng One Hit">
+  </div>
+  <div class="feature">
+    <div class="feat-icon">⚡</div>
+    <div class="feat-text"><div class="feat-name">Speed</div><div class="feat-desc">Tăng tốc độ đánh mô phỏng khi nhấn nút tấn công.</div></div>
+    <input class="switch" id="speed" type="checkbox" aria-label="Bật mô phỏng Speed">
+  </div>
+</section>
+<section class="card">
+  <div class="section-title">Đấu trường thử nghiệm</div>
+  <div class="hint" style="margin-bottom:13px">Thử nghiệm cục bộ — không kết nối game thật.</div>
+  <div class="arena">
+    <div class="monster" id="monster" aria-label="Quái vật">👾</div>
+    <div class="monster-name" id="monsterName">Nấm Quỷ tập sự</div>
+    <div class="hp-label"><span>HP QUÁI</span><strong id="hpText">100 / 100</strong></div>
+    <div class="bar"><div class="fill" id="hpFill"></div></div>
+    <div class="stats">
+      <div class="stat"><div class="stat-label">SÁT THƯƠNG MỖI ĐÒN</div><div class="stat-val" id="damage">20</div></div>
+      <div class="stat"><div class="stat-label">TỐC ĐỘ MÔ PHỎNG</div><div class="stat-val" id="speedText">1×</div></div>
+    </div>
+    <div class="actions">
+      <button class="btn primary" id="attack">⚔️ Tấn công</button>
+      <button class="btn secondary" id="respawn">↻ Quái mới</button>
+    </div>
+    <div class="log" id="log" role="status" aria-live="polite">Sẵn sàng! Bật tùy chọn rồi nhấn <strong>Tấn công</strong>.</div>
+  </div>
+</section>
+<div class="notice"><span>ⓘ</span><div><strong>Lưu ý:</strong> Đây là bản web mô phỏng độc lập. Hai nút chỉ thay đổi đấu trường này, không tác động đến Nấm Lùn Tiến Lên, không đọc dữ liệu game và không tạo cheat.</div></div>
+<div style="text-align:center"><button class="reset" id="reset">Đặt lại tùy chọn</button></div>
+<div class="footer">Nấm Lùn Lab v0.2 · Chạy trực tiếp trên trình duyệt · Không cần đăng nhập</div>
+</div>
+<script>
+(() => {
+ const oneHit=document.getElementById('oneHit'), speed=document.getElementById('speed');
+ const monster=document.getElementById('monster'), name=document.getElementById('monsterName');
+ const hpText=document.getElementById('hpText'), hpFill=document.getElementById('hpFill');
+ const damage=document.getElementById('damage'), speedText=document.getElementById('speedText');
+ const log=document.getElementById('log'), attack=document.getElementById('attack');
+ let hp=100, defeated=false, hits=0;
+ function update(){
+   hpText.textContent=`${hp} / 100`; hpFill.style.width=`${hp}%`;
+   damage.textContent=oneHit.checked?'100':(speed.checked?'35':'20');
+   speedText.textContent=speed.checked?'2×':'1×';
+   attack.disabled=defeated; attack.style.opacity=defeated?'.55':'1';
+ }
+ function say(message){log.innerHTML=message;}
+ function strike(){
+   if(defeated)return;
+   hits++;
+   const dmg=oneHit.checked?hp:(speed.checked?35:20);
+   hp=Math.max(0,hp-dmg);
+   monster.classList.remove('hit'); void monster.offsetWidth; monster.classList.add('hit');
+   if(hp===0){defeated=true;monster.textContent='💫';name.textContent='Quái đã bị hạ';say(`<strong>Hạ quái thành công!</strong> Tổng số đòn: ${hits}. Nhấn “Quái mới” để chơi lại.`);}
+   else {say(`Đòn đánh #${hits}: gây <strong>${dmg}</strong> sát thương. Quái còn ${hp} HP.`);}
+   update();
+ }
+ function respawn(){hp=100;defeated=false;hits=0;monster.textContent='👾';name.textContent='Nấm Quỷ tập sự';say('Quái mới đã xuất hiện. Hãy thử lại!');update();}
+ oneHit.addEventListener('change',()=>{update();say(oneHit.checked?'Mô phỏng <strong>One Hit</strong> đã bật.':'Mô phỏng One Hit đã tắt.');});
+ speed.addEventListener('change',()=>{update();say(speed.checked?'Mô phỏng <strong>Speed 2×</strong> đã bật.':'Mô phỏng Speed đã tắt.');});
+ attack.addEventListener('click',strike); document.getElementById('respawn').addEventListener('click',respawn);
+ document.getElementById('reset').addEventListener('click',()=>{oneHit.checked=false;speed.checked=false;respawn();say('Đã đặt lại tất cả tùy chọn.');});
+ update();
+})();
+</script>
+</body>
+</html>
